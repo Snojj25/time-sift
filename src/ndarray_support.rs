@@ -20,7 +20,6 @@ where
     /// * `stride` - The number of elements between lagged versions in the resulting vector.
     ///            If set to `0` or `data.len()`, no padding is introduced. Values larger than
     ///            `data.len()` creates padding entries set to the `fill` value.
-    ///
     /// ## Returns
     /// A vector containing lagged copies of the original data, or an error.
     ///

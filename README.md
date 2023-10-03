@@ -1,14 +1,9 @@
-# timelag — creating time-lagged time series data
-
-[![Crates.io](https://img.shields.io/crates/v/timelag)](https://crates.io/crates/timelag)
-[![Crates.io](https://img.shields.io/crates/l/timelag)](https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sunsided/timelag-rs/rust.yml)](https://github.com/sunsided/timelag-rs/actions/workflows/rust.yml)
-[![docs.rs](https://img.shields.io/docsrs/timelag)](https://docs.rs/timelag/)
+# time-sift — creating time-lagged time series data
 
 ---
 
 This crate provides the `lag_matrix` and related functions to create time-lagged versions of time series similar
-to MATLAB's [`lagmatrix`](https://mathworks.com/help/econ/lagmatrix.html) for time series analysis.
+to MATLAB's `lagmatrix` for time series analysis.
 
 Support for [ndarray](https://crates.io/crates/ndarray)'s `Array1` and `Array2` traits is available via the
 `ndarray` crate feature.
@@ -22,15 +17,15 @@ use timelag::lag_matrix;
 
 fn singular_series() {
     let data = [1.0, 2.0, 3.0, 4.0];
-    
+
     // Using infinity for padding because NaN doesn't equal itself.
     let lag = f64::INFINITY;
     let padding = f64::INFINITY;
-    
+
     // Create three lagged versions.
     // Use a stride of 5 for the rows, i.e. pad with one extra entry.
     let lagged = lag_matrix(&data, 0..=3, lag, 5).unwrap();
-    
+
     assert_eq!(
         lagged,
         &[
@@ -54,7 +49,7 @@ fn singular_series() {
             lag, lag, lag, 1.0,
         ]
     );
-    
+
     assert_eq!(lagged, other);
 }
 ```

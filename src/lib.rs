@@ -10,7 +10,6 @@
 //! ## Example
 //!
 //! For singular time series:
-//!
 //! ```
 //! use timelag::{CreateLagMatrix, lag_matrix};
 //!
