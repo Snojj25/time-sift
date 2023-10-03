@@ -1,0 +1,22 @@
+[package]
+name = "timelag"
+version = "0.4.0"
+description = "Creating time-lagged time series data"
+authors = ["Markus Mayer"]
+repository = "https://github.com/sunsided/timelag-rs"
+keywords = ["time-series", "analysis", "forecasting", "control", "signal-processing"]
+categories = ["algorithms", "finance", "date-and-time", "science"]
+license = "EUPL-1.2"
+readme = "README.md"
+edition = "2021"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[features]
+default = []
+ndarray = ["dep:ndarray"]
+
+[dependencies]
+ndarray = { version = "0.15.6", optional = true }
