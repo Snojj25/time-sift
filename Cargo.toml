@@ -1,9 +1,9 @@
 [package]
-name = "timelag"
-version = "0.4.0"
+name = "time-sift"
+version = "0.1.0"
 description = "Creating time-lagged time series data"
-authors = ["Markus Mayer"]
-repository = "https://github.com/sunsided/timelag-rs"
+authors = ["Snojj25"]
+repository = "https://github.com/Snojj25/time-sift"
 keywords = ["time-series", "analysis", "forecasting", "control", "signal-processing"]
 categories = ["algorithms", "finance", "date-and-time", "science"]
 license = "EUPL-1.2"

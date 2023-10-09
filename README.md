@@ -13,7 +13,7 @@ Support for [ndarray](https://crates.io/crates/ndarray)'s `Array1` and `Array2` 
 For singular time series:
 
 ```rust
-use timelag::lag_matrix;
+use time_sift::lag_matrix;
 
 fn singular_series() {
     let data = [1.0, 2.0, 3.0, 4.0];
@@ -57,7 +57,7 @@ fn singular_series() {
 For matrices with time series along their rows:
 
 ```rust
-use timelag::{lag_matrix_2d, MatrixLayout};
+use time_sift::{lag_matrix_2d, MatrixLayout};
 
 fn matrix_rows() {
     let data = [
@@ -90,7 +90,7 @@ fn matrix_rows() {
 For matrices with time series along their columns:
 
 ```rust
-use timelag::{lag_matrix_2d, MatrixLayout};
+use time_sift::{lag_matrix_2d, MatrixLayout};
 
 fn matrix_columns() {
     let data = [

@@ -29,7 +29,7 @@ where
     ///
     /// ## Example
     /// ```
-    /// use timelag::prelude::*;
+    /// use time_sift::prelude::*;
     ///
     /// let data = [1.0, 2.0, 3.0, 4.0];
     ///
@@ -55,7 +55,7 @@ where
     /// Lags can be provided in arbitrary order:
     ///
     /// ```
-    /// # use timelag::prelude::*;
+    /// # use time_sift::prelude::*;
     /// # let data = [1.0, 2.0, 3.0, 4.0];
     /// # let lag = f64::INFINITY;
     /// # let padding = f64::INFINITY;
