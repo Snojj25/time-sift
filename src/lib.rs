@@ -1,4 +1,4 @@
-//! # timelag — creating time-lagged time series data
+//! # time_sift — creating time-lagged time series data
 //!
 //! This crate provides the `lag_matrix` and related functions to create time-lagged versions of time series similar
 //! to MATLAB's [`lagmatrix`](https://mathworks.com/help/econ/lagmatrix.html) for time series analysis.
@@ -11,7 +11,7 @@
 //!
 //! For singular time series:
 //! ```
-//! use timelag::{CreateLagMatrix, lag_matrix};
+//! use time_sift::{CreateLagMatrix, lag_matrix};
 //!
 //! let data = [1.0, 2.0, 3.0, 4.0];
 //!
@@ -42,7 +42,7 @@
 //! For matrices with time series along their rows:
 //!
 //! ```
-//! # use timelag::{lag_matrix_2d, MatrixLayout};
+//! # use time_sift::{lag_matrix_2d, MatrixLayout};
 //! let data = [
 //!      1.0,  2.0,  3.0,  4.0,
 //!     -1.0, -2.0, -3.0, -4.0
@@ -72,7 +72,7 @@
 //! For matrices with time series along their columns:
 //!
 //! ```
-//! # use timelag::{lag_matrix_2d, MatrixLayout};
+//! # use time_sift::{lag_matrix_2d, MatrixLayout};
 //! let data = [
 //!     1.0, -1.0,
 //!     2.0, -2.0,
@@ -279,7 +279,7 @@ pub trait CreateLagMatrix<T> {
     ///
     /// ## Example
     /// ```
-    /// use timelag::prelude::*;
+    /// use time_sift::prelude::*;
     ///
     /// let data = [1.0, 2.0, 3.0, 4.0];
     ///
@@ -342,7 +342,7 @@ pub trait CreateLagMatrix<T> {
     /// For matrices with time series along their rows:
     ///
     /// ```
-    /// # use timelag::{lag_matrix_2d, MatrixLayout};
+    /// # use time_sift::{lag_matrix_2d, MatrixLayout};
     /// let data = [
     ///      1.0,  2.0,  3.0,  4.0,
     ///     -1.0, -2.0, -3.0, -4.0
@@ -372,7 +372,7 @@ pub trait CreateLagMatrix<T> {
     /// For matrices with time series along their columns:
     ///
     /// ```
-    /// # use timelag::{lag_matrix_2d, MatrixLayout};
+    /// # use time_sift::{lag_matrix_2d, MatrixLayout};
     /// let data = [
     ///     1.0, -1.0,
     ///     2.0, -2.0,
@@ -463,7 +463,7 @@ where
 ///
 /// ## Example
 /// ```
-/// # use timelag::lag_matrix;
+/// # use time_sift::lag_matrix;
 /// let data = [1.0, 2.0, 3.0, 4.0];
 ///
 /// // Using infinity for padding because NaN doesn't equal itself.
@@ -596,7 +596,7 @@ impl MatrixLayout {
 /// For matrices with time series along their rows:
 ///
 /// ```
-/// # use timelag::{lag_matrix_2d, MatrixLayout};
+/// # use time_sift::{lag_matrix_2d, MatrixLayout};
 /// let data = [
 ///      1.0,  2.0,  3.0,  4.0,
 ///     -1.0, -2.0, -3.0, -4.0
@@ -626,7 +626,7 @@ impl MatrixLayout {
 /// For matrices with time series along their columns:
 ///
 /// ```
-/// # use timelag::{lag_matrix_2d, MatrixLayout};
+/// # use time_sift::{lag_matrix_2d, MatrixLayout};
 /// let data = [
 ///     1.0, -1.0,
 ///     2.0, -2.0,
